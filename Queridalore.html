@@ -143,11 +143,11 @@ body.intro .cover .reveal{opacity:0!important;transform:translateY(26px)!importa
 .again{background:none;border:0;font-size:12px;letter-spacing:2px;color:#7d746b;text-decoration:underline;cursor:pointer;margin-top:50px;padding:12px}
 .gift{display:block;width:150px;height:150px;margin:24px auto 0;position:relative;background:none;border:0;cursor:pointer}
 .gift .lid,.gift .bx{position:absolute;background:#e0cfba;box-shadow:0 8px 18px rgba(70,55,40,.15)}
-.gift .lid{left:-8px;right:-8px;top:22px;height:38px;border-radius:5px;z-index:2;transition:transform .8s cubic-bezier(.3,1.4,.5,1);background:#d6c2aa}
+.gift .lid{left:-8px;right:-8px;top:22px;height:38px;border-radius:5px;z-index:2;transition:transform .8s cubic-bezier(.3,1.4,.5,1),opacity .5s ease;background:#d6c2aa}
 .gift .bx{left:0;right:0;top:58px;bottom:0;border-radius:0 0 6px 6px}
 .gift .lid:after,.gift .bx:after{content:"";position:absolute;left:50%;width:22px;margin-left:-11px;top:0;bottom:0;background:#a78e7b}
 .gift .lid:before{content:"🤍";position:absolute;left:50%;top:-30px;transform:translateX(-50%);font-size:34px;z-index:3}
-.gift.open .lid{transform:translate(28px,-64px) rotate(16deg)}
+.gift.open .lid{transform:translate(28px,-30px) rotate(16deg);opacity:0;pointer-events:none}
 .gift:not(.open){animation:wob 2.4s ease-in-out infinite}
 .vales{margin-top:26px;display:grid;gap:12px;text-align:left}
 .vale{display:flex;align-items:center;gap:12px;justify-content:space-between;padding:16px 18px;background:#fffdf9;border:2px dashed #cdbfaf;border-radius:8px;box-shadow:0 8px 20px rgba(70,55,40,.06);animation:up .6s both}
@@ -256,7 +256,7 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
       <p class="fsub">El día que empezamos a hablar</p>
       <div class="sky" id="sky"></div>
       <div class="song">
-        <button class="btn" id="songBtn" type="button">♪ Nuestra canción</button>
+        <button class="btn" id="songBtn" type="button">♪ Tu canción favorita</button>
         <div id="songBox"></div>
       </div>
     </div>
@@ -602,7 +602,7 @@ $("#lov").oninput = function(){
 (function(){
   const b = $("#songBtn"), box = $("#songBox"); if(!b) return;
   b.onclick = ()=>{
-    if(box.firstChild){ box.innerHTML = ""; b.textContent = "♪ tu canción favorita"; return; }
+    if(box.firstChild){ box.innerHTML = ""; b.textContent = "♪ Tu canción favorita"; return; }
     const a = document.createElement("audio");
     a.src = SONG.archivo; a.controls = true; a.preload = "auto"; a.setAttribute("aria-label","Polaris");
     box.appendChild(a); b.textContent = "Cerrar canción";
