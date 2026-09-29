@@ -376,7 +376,7 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
       <h3 class="ftitle">¿Cuánto me quieres?</h3>
       <input type="range" id="lov" min="0" max="100" value="10" aria-label="Cuánto me quieres">
       <p class="lovtxt" id="lovtxt">Un poquito</p>
-      <button class="btn" id="lovSend" type="button" hidden>Decírselo a Rafa</button>
+      <button class="btn" id="lovSend" type="button" hidden>Pulsa, quiero ver el resultado</button>
     </div>
 
 
@@ -848,7 +848,7 @@ $("#lovSend").onclick = ()=>wa("Cuánto te quiero: "+$("#lov").value+"% ("+$("#l
   const wrap = document.createElement("div"); wrap.className = "skyw"; wrap.appendChild(cv); wrap.appendChild(ov);
   wrap.addEventListener("click",()=>wrap.classList.toggle("lines"));
   box.innerHTML = ""; box.appendChild(wrap);
-  box.insertAdjacentHTML("beforeend",'<div class="cap">'+SKY.etiqueta+'<small>'+SKY.lugar+'</small><small>Toca el cielo para ver las constelaciones</small></div>');
+  box.insertAdjacentHTML("beforeend",'<div class="cap">'+SKY.etiqueta+'<small>'+SKY.lugar+'</small></div>');
 })();
 
 /* canción: solo suena si ella pulsa */
