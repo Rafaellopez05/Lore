@@ -602,7 +602,7 @@ $("#lov").oninput = function(){
 (function(){
   const b = $("#songBtn"), box = $("#songBox"); if(!b) return;
   b.onclick = ()=>{
-    if(box.firstChild){ box.innerHTML = ""; b.textContent = "♪ Nuestra canción"; return; }
+    if(box.firstChild){ box.innerHTML = ""; b.textContent = "♪ tu canción favorita"; return; }
     const a = document.createElement("audio");
     a.src = SONG.archivo; a.controls = true; a.preload = "auto"; a.setAttribute("aria-label","Polaris");
     box.appendChild(a); b.textContent = "Cerrar canción";
