@@ -7,15 +7,15 @@
 <meta name="theme-color" content="#f5efe7">
 <meta name="description" content="Para mi mujer">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🤍%3C/text%3E%3C/svg%3E">
-<title>Nuestra historia 🤍</title>
+<title>Motivos por los que te elegí 🤍</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f5efe7;--ink:#393532;--muted:#625b55;--accent:#a78e7b;--tape:rgba(205,187,164,.75);--pad:clamp(20px,6vw,64px);--line:#ded3c6}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;overflow-x:clip;-webkit-text-size-adjust:100%}
-body{background:radial-gradient(circle at 12% 8%,rgba(255,255,255,.95),transparent 26%),radial-gradient(circle at 88% 32%,rgba(223,207,190,.45),transparent 30%),var(--bg);color:var(--ink);font-family:Lora,Georgia,serif;overflow-x:clip;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+body{background:radial-gradient(circle at 12% 8%,rgba(255,255,255,.95),transparent 26%),radial-gradient(circle at 88% 32%,rgba(223,207,190,.45),transparent 30%),var(--bg);color:var(--ink);font-family:Montserrat,Arial,sans-serif;overflow-x:clip;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.16;background-image:repeating-linear-gradient(0deg,rgba(70,55,40,.035) 0,rgba(70,55,40,.035) 1px,transparent 1px,transparent 5px)}
 section{position:relative}
 img{max-width:100%}
@@ -307,7 +307,7 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
 <section class="cover">
   <div class="cover-inner">
     <div class="eyebrow reveal">Para Lorena</div>
-    <h1 class="cover-title reveal d1s">Nuestra<br>historia<span class="ch">🤍</span></h1>
+    <h1 class="cover-title reveal d1s">Motivos<br>por los que<br>te elegí<span class="ch">🤍</span></h1>
     <div class="ornament reveal d2s"></div>
     <p class="cover-sub reveal d3s">Un pequeño resumen de lo que te quiero</p>
     <div class="counter reveal d3s">
@@ -470,8 +470,7 @@ const VALES = [
  "Una cena donde tú elijas",
  "Un día entero para ti",
  "Un viaje para ir a verte",
- "Ganar una discusión sin rechistar un solo uso",
- 
+ "Ganar una discusión sin rechistar"
 ];
 
 /* =====================================================
@@ -849,7 +848,7 @@ $("#lovSend").onclick = ()=>wa("Cuánto te quiero: "+$("#lov").value+"% ("+$("#l
   const wrap = document.createElement("div"); wrap.className = "skyw"; wrap.appendChild(cv); wrap.appendChild(ov);
   wrap.addEventListener("click",()=>wrap.classList.toggle("lines"));
   box.innerHTML = ""; box.appendChild(wrap);
-  box.insertAdjacentHTML("beforeend",'<div class="cap">'+SKY.etiqueta+'<small>'+SKY.lugar+'</small></div>');
+  box.insertAdjacentHTML("beforeend",'<div class="cap">'+SKY.etiqueta+'<small>'+SKY.lugar+'</small><small>Toca el cielo para ver las constelaciones</small></div>');
 })();
 
 /* canción: solo suena si ella pulsa */
