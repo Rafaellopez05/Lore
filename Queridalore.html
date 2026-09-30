@@ -289,6 +289,166 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
 .bday .bf[hidden]{display:none}
 .bday.lockd{background:#f6f0e8;border-style:dashed}
 .bday.lockd .em{opacity:.75}
+
+/* lo que me enamoró */
+.enamoro{padding:clamp(56px,10vw,90px) var(--pad);text-align:center}
+.enamoro.locked{display:none}
+.enin{width:min(640px,100%);margin:auto}
+.engrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:34px}
+.fcard{width:100%;height:260px;padding:0;border:0;background:none;cursor:pointer;text-align:center;perspective:1000px}
+.fc-in{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.4,.2,.2,1)}
+.fcard.on .fc-in{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:26px 22px;border:1px solid rgba(194,179,163,.55);border-radius:4px;background:#fffdf9;box-shadow:0 16px 36px rgba(70,55,40,.12);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.fc-face:before{content:"";position:absolute;top:-10px;left:50%;width:64px;height:18px;margin-left:-32px;background:var(--tape);box-shadow:0 1px 3px rgba(0,0,0,.1);transform:rotate(-3deg)}
+.fc-back{transform:rotateY(180deg);justify-content:flex-start;background:repeating-linear-gradient(#f6eee3 0,#f6eee3 31px,#e4d8c9 31px,#e4d8c9 32px)}
+.fc-num{font-size:11px;letter-spacing:4px;color:var(--accent)}
+.fc-heart{font-size:34px;line-height:1}
+.fc-ft,.fc-bt{font-family:Caveat,cursive;font-weight:600;color:var(--ink);white-space:pre-line}
+.fc-ft{font-size:clamp(26px,7vw,32px);line-height:1.15}
+.fc-bt{width:100%;font-size:clamp(22px,6vw,26px);line-height:32px;overflow:auto;text-align:left}
+.fc-ft:empty,.fc-bt:empty{display:none}
+
+/* sorpresa del día */
+.dias{padding:clamp(56px,10vw,90px) var(--pad);text-align:center;background:rgba(230,219,205,.2);scroll-margin-top:10px}
+.dias.locked{display:none}
+.din{width:min(560px,100%);margin:auto}
+.dlist{list-style:none;margin-top:30px;text-align:left}
+.dia{margin-top:14px;background:#fffdf9;border:1px solid rgba(194,179,163,.55);border-radius:6px;box-shadow:0 10px 26px rgba(70,55,40,.08);overflow:hidden}
+.dia.lock{opacity:.6}
+.dia.hoy{border-color:#cdbfaf;box-shadow:0 14px 34px rgba(70,55,40,.16)}
+.dhead{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:14px 18px;border:0;background:none;text-align:left;cursor:pointer}
+.dico{width:34px;flex-shrink:0;text-align:center;font-size:24px;line-height:1;color:var(--accent)}
+.dico svg{display:block;width:24px;height:24px;margin:auto}
+.dtx{flex:1;display:flex;flex-direction:column;gap:2px}
+.dn{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--accent)}
+.dti{font-family:Caveat,cursive;font-size:28px;line-height:1;font-weight:600}
+.dst{max-width:38%;font-size:12px;line-height:1.4;color:#a58d7b;text-align:right}
+.dbody{padding:4px 18px 26px;text-align:center}
+.dbody[hidden]{display:none}
+.dfrase{padding:14px 4px 4px;font-family:Caveat,cursive;font-size:clamp(30px,8vw,38px);line-height:1.15;font-weight:600;white-space:pre-line}
+.dfirma{display:block;margin-top:8px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}
+.dmsg{margin-top:18px;font-family:Caveat,cursive;font-size:clamp(26px,7vw,32px);line-height:1.2;font-weight:600;white-space:pre-line;animation:up .5s both}
+.dagain{display:block;margin:16px auto 0}
+.pzi{margin:10px 0 6px;font-size:13px;color:#776e65}
+.pzi b{color:var(--ink)}
+.rasca{position:relative;display:grid;place-items:center;min-height:150px;margin-top:14px;overflow:hidden;border-radius:8px;background:#fffdf9;border:1px dashed #cdbfaf}
+.rtxt{padding:16px 18px;font-family:Caveat,cursive;font-size:clamp(24px,6.5vw,30px);line-height:1.15;font-weight:600;white-space:pre-line}
+.rasca canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:pointer;transition:opacity .7s}
+.rasca canvas.off{opacity:0;pointer-events:none}
+.pzb{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:3px;width:min(340px,100%);aspect-ratio:1;margin:14px auto 0;padding:6px;background:#fffdf9;border:1px solid rgba(194,179,163,.55);border-radius:4px;box-shadow:0 12px 30px rgba(70,55,40,.14)}
+.pzb.win{gap:0}
+.pt{padding:0;border:0;border-radius:2px;background-image:var(--img);background-size:300% 300%;cursor:pointer}
+.pt.hueco{visibility:hidden}
+.mmg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.mc{aspect-ratio:1;padding:0;border:0;background:none;perspective:600px;cursor:pointer}
+.mc-in{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transition:transform .5s}
+.mc.on .mc-in{transform:rotateY(180deg)}
+.mc-f,.mc-b{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden;border-radius:4px;background:#fffdf9;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.mc-f{border:1px solid rgba(194,179,163,.7);font-size:22px}
+.mc-b{transform:rotateY(180deg);border:1px solid #cdbfaf}
+.mc-b img{display:block;width:100%;height:100%;object-fit:cover}
+.mc.ok .mc-b{border-color:#8fae8b;box-shadow:0 0 0 2px #8fae8b}
+.atz{position:relative;height:320px;margin-top:10px;overflow:hidden;border-radius:8px;background:rgba(255,253,249,.7);border:1px dashed #cdbfaf}
+.ah{position:absolute;top:0;width:52px;height:52px;padding:0;border:0;background:none;font-size:34px;line-height:1;cursor:pointer;touch-action:manipulation;animation:dfall 3s linear forwards}
+.ah.pop{opacity:0;pointer-events:none;transition:opacity .15s}
+@keyframes dfall{from{transform:translateY(-60px)}to{transform:translateY(340px)}}
+.atb{display:block;margin:12px auto 0}
+.atb[hidden]{display:none}
+.dq h4{margin:6px 0 12px;font-family:Caveat,cursive;font-size:clamp(28px,7.5vw,34px);line-height:1.1;font-weight:600}
+.dqm{min-height:22px;margin-top:12px;font-size:14px;color:#776e65}
+.dlink{display:block;width:max-content;max-width:100%;margin:24px auto 0;padding:12px 22px;border:1px solid #cdbfaf;border-radius:999px;background:rgba(255,253,249,.9);color:#6b5d50;font-size:14px;letter-spacing:1px;text-decoration:none}
+.dlink[hidden]{display:none}
+body.tab-hist .t-nos,body.tab-hist .t-sor,body.tab-hist .t-jue,body.tab-hist .t-pre,body.tab-nos .t-hist,body.tab-nos .t-sor,body.tab-nos .t-jue,body.tab-nos .t-pre,body.tab-sor .t-hist,body.tab-sor .t-nos,body.tab-sor .t-jue,body.tab-sor .t-pre,body.tab-jue .t-hist,body.tab-jue .t-nos,body.tab-jue .t-sor,body.tab-jue .t-pre,body.tab-pre .t-hist,body.tab-pre .t-nos,body.tab-pre .t-sor,body.tab-pre .t-jue{display:none!important}
+body.tab-hist .final,body.tab-jue .final,body:not(.tab-hist) .prog{display:none}
+body{padding-bottom:104px}
+body.intro .tabs{display:none}
+.tabs{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:45;width:min(480px,calc(100% - 20px));display:flex;padding:6px;border-radius:28px;background:rgba(255,253,249,.82);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(194,179,163,.55);box-shadow:0 12px 34px rgba(70,55,40,.16)}
+.tind{position:absolute;top:6px;bottom:6px;left:6px;width:calc((100% - 12px)/5);border-radius:22px;background:#efe3d3;box-shadow:inset 0 0 0 1px rgba(194,179,163,.5);transition:transform .38s cubic-bezier(.3,1.25,.4,1);z-index:0}
+.tb{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:56px;border:0;background:none;padding:9px 2px 8px;font:inherit;color:#9a8b7c;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .25s,opacity .25s}
+.tb .ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.tb .tl{font-size:10px;font-weight:600;letter-spacing:.02em}
+.tb .em{display:block;width:22px;height:22px;font-size:19px;line-height:22px;text-align:center;filter:grayscale(.4);transition:transform .3s,filter .3s}
+.tb.on .em{filter:none;transform:translateY(-1px) scale(1.1)}
+.tb.on{color:#5f4f43}
+.tb.on .ic{transform:translateY(-1px) scale(1.1)}
+.tb .lk-ic{display:none;position:absolute;top:5px;left:calc(50% + 5px);width:15px;height:15px;padding:2px;border-radius:50%;background:#f5efe7;fill:none;stroke:#8b7c6d;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;box-shadow:0 0 0 1.5px rgba(255,253,249,.9)}
+.tb.lk .lk-ic{display:block}
+.tb.lk:not(.on){opacity:.7}
+.tb i{position:absolute;top:3px;left:calc(50% + 3px);min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#c48f8a;color:#fff;font-style:normal;font-size:10px;font-weight:700;line-height:17px;text-align:center}
+.tb i,.tb i[hidden]{display:none!important}
+.tabs.pulse .tb:not(.on):not(.lk) .ic{animation:bob .7s ease 3}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){.tind,.tb .ic{transition:none}.tabs.pulse .ic{animation:none!important}}
+.toast{bottom:calc(100px + env(safe-area-inset-bottom))}
+/* premios (bloqueado) */
+.fblock.t-pre,.fblock.sorhead{margin-top:0;border-top:0;padding-top:0}
+.prize{position:relative;width:min(520px,100%);margin:26px auto 0;padding:34px clamp(20px,6vw,40px);background:#f6f0e8;border:1px dashed rgba(167,142,123,.7);border-radius:14px;text-align:center;cursor:pointer;box-shadow:0 20px 40px rgba(70,55,40,.08)}
+.prize .pl{width:74px;height:74px;margin:0 auto 12px;display:grid;place-items:center;border-radius:50%;background:#efe3d3;color:#8b6f5a}
+.prize .pl svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.prize h4{font-family:Caveat,cursive;font-size:clamp(34px,10vw,44px);line-height:1.1;font-weight:700;color:#5f544b;margin:0 0 6px}
+.prize p{margin:0;font-size:15px;line-height:1.7;color:#6f665d}
+.prize .meds{display:flex;justify-content:center;gap:12px;margin-top:20px}
+.prize .meds span{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,253,249,.7);border:1px dashed #cdbfaf;color:#b3a494;font-family:Caveat,cursive;font-size:26px;font-weight:700}
+
+/* juego de hoy + puntos */
+.pts{display:inline-flex;align-items:center;gap:8px;margin:16px auto 0;padding:8px 18px;border:1px solid rgba(194,179,163,.6);border-radius:999px;background:#fffdf9;color:#6f665d;font-size:14px;box-shadow:0 6px 16px rgba(70,55,40,.08)}
+.pts b{font-family:Caveat,cursive;font-size:30px;line-height:1;color:#8b6f5a}
+.pts.bump{animation:pop .5s ease}
+@keyframes pop{40%{transform:scale(1.18)}}
+.pjg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:min(360px,100%);margin:6px auto 0}
+.pjc{aspect-ratio:1;border:1px solid #d9cbbb;border-radius:12px;background:#efe3d3;color:#b3a08b;font-family:Caveat,cursive;font-size:30px;font-weight:700;cursor:pointer;display:grid;place-items:center;padding:0;transition:background .25s;-webkit-tap-highlight-color:transparent}
+.pjc.up,.pjc.ok{background:#fffdf9;font-size:32px}
+.pjc.up{box-shadow:0 0 0 2px #c9a68a inset}
+.pjc.ok{background:#f3e9dc;border-color:#c48f8a;cursor:default}
+@media(prefers-reduced-motion:reduce){.pjc,.pts.bump{transition:none;animation:none}}
+.prize .ppts{margin-top:14px;font-size:14px;color:#6f665d}
+.prize .ppts b{font-family:Caveat,cursive;font-size:28px;color:#8b6f5a;vertical-align:-2px}
+@media(prefers-reduced-motion:reduce){.mc,.pts.bump{transition:none;animation:none}}
+.prize.shake{animation:shk .5s ease}
+@keyframes shk{20%{transform:translateX(-7px) rotate(-1deg)}40%{transform:translateX(6px) rotate(1deg)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+@media(prefers-reduced-motion:reduce){.prize.shake{animation:none}}
+
+/* premios */
+.ptier{font-family:Caveat,cursive;font-size:clamp(32px,8.5vw,40px);font-weight:600;margin:38px 0 2px;color:#5f544b;line-height:1}
+.ptier small{display:block;margin-top:6px;font-family:Montserrat,Arial,sans-serif;font-size:13px;font-weight:400;line-height:1.5;color:#8b8178}
+.ptier.dzp{position:relative;padding-top:50px;margin-top:20px}.plist{display:grid;gap:12px;margin-top:16px;text-align:left}
+.pcard{position:relative;padding:16px 18px;background:#fffdf9;border:1px solid rgba(194,179,163,.55);border-radius:12px;box-shadow:0 8px 20px rgba(70,55,40,.06)}
+.pcard.pm{border-color:#d2b98e;background:linear-gradient(#fffdf9,#fbf4e6)}
+.pcard h4{font-family:Caveat,cursive;font-size:clamp(25px,6.8vw,29px);line-height:1.1;font-weight:700;color:#5f544b}
+.pcard p{margin-top:5px;font-size:14px;line-height:1.6;color:#6f665d}
+.pfoot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+.pcost{font-size:14px;color:#6f665d}
+.pcost b{font-family:Caveat,cursive;font-size:28px;color:#8b6f5a;vertical-align:-2px}
+.pcard .btn{margin:0;padding:9px 18px;min-height:40px;font-size:13px;flex-shrink:0}
+.pcard .btn:disabled{opacity:.5;cursor:default}
+.pbar{height:4px;border-radius:4px;background:#eee3d4;margin-top:12px;overflow:hidden}
+.pbar i{display:block;height:100%;background:#c9a68a;border-radius:4px;transition:width .6s}
+.pcard.got{opacity:.6}
+.pcard.soon{text-align:center;border-style:dashed;background:rgba(255,253,249,.6)}
+.pcard.soon h4{color:#a1978d}
+.pnote{margin-top:26px;font-size:14px;line-height:1.7;color:#8b8178;text-align:center}
+
+/* dibujitos en todas las pestañas (mismo estilo que Historia) */
+.dzw{position:relative}
+.fblock.t-pre.dzw,.fblock.sorhead.dzw{padding-top:66px}
+.dz{position:absolute;left:0;right:0;top:0;height:0;z-index:2;pointer-events:none}
+.dzs>.dz{top:-62px}
+.dz svg{position:absolute;fill:none;stroke:#c48f8a;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.dz .h{width:34px;top:-8px;right:5%;transform:rotate(12deg)}
+.dz .s{width:26px;top:6px;right:calc(5% + 46px);stroke:#c9a86a;transform:rotate(-14deg)}
+.dz .ar{width:34px;top:28px;left:12%;stroke:#8b6f5a;stroke-width:2}
+.dz .t{position:absolute;top:2px;left:5%;font-family:Caveat,cursive;font-size:clamp(22px,6vw,26px);line-height:1;color:#8b6f5a;transform:rotate(-5deg);white-space:nowrap}
+.dz.r .h{right:auto;left:5%;transform:rotate(-12deg)}
+.dz.r .s{right:auto;left:calc(5% + 46px);transform:rotate(14deg)}
+.dz.r .ar{left:auto;right:12%;transform:scaleX(-1)}
+.dz.r .t{left:auto;right:5%;transform:rotate(5deg)}
+.dzw .ftitle:after{content:"";display:block;width:min(150px,55%);height:10px;margin:10px auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10'%3E%3Cpath d='M2 6c10-7 18 5 28-1s18 5 28-1 18 5 28-1 18 4 30-1' fill='none' stroke='%23c48f8a' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;background-size:100% 100%}
+.bday:before,.prize:before,.mapbox:before{content:"";position:absolute;top:-11px;left:50%;width:70px;height:20px;margin-left:-35px;background:var(--tape);box-shadow:0 1px 3px rgba(0,0,0,.1);transform:rotate(-3deg);z-index:2}
+.mdl{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:rgba(40,32,26,.45)}
+.mdlc{width:min(340px,100%);padding:24px 22px;background:#fffdf9;border-radius:14px;text-align:center;box-shadow:0 20px 50px rgba(40,32,26,.3)}
+.mdlc p{font-size:16px;line-height:1.55;margin-bottom:18px;color:var(--ink)}
+.mdlb{display:flex;gap:10px;justify-content:center}
+.mdlb .btn{margin:0;padding:10px 22px}
 </style>
 </head>
 <body>
@@ -390,6 +550,13 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
       <div class="bday lockd" id="bday"><div class="em">🎂</div><h4 id="bdayT">Una tarjeta te espera</h4><p id="bdayP"></p><span class="bf" id="bdayF" hidden>Rafael 🤍</span></div>
     </div>
 
+    <div class="fblock t-pre">
+      <h3 class="ftitle">Premios</h3>
+      <p class="fsub">Cada juego que completas te da un punto. Cámbialos por lo que quieras.</p>
+      <div class="pts"><span aria-hidden="true">⭐</span><b class="ptsn">0</b> puntos disponibles</div>
+      <div id="prem"></div>
+    </div>
+
     <button class="again" id="again" type="button">Volver a empezar</button>
   </div>
 </section>
@@ -473,6 +640,76 @@ const VALES = [
  "Ganar una discusión sin rechistar"
 ];
 
+// Lo que me enamoró: cartas que se giran. f = lo que se ve por delante · b = lo que se lee por detrás
+// Vacío = carta en blanco. Rellénalas cuando quieras (\n = salto de línea). Puedes añadir o quitar cartas.
+const ENAMORO = [
+ {f:"", b:""},
+ {f:"", b:""},
+ {f:"", b:""},
+ {f:"", b:""}
+];
+
+// Premios que se cambian por puntos. n = nombre · c = puntos que cuesta · t = "normal" o "premium"
+// Se consigue 1 punto por cada juego completado (las frases no dan puntos). Cambia los puntos o los textos cuando quieras.
+const PREMIOS = [
+ {id:"peli",   n:"Elegir la película de la cita virtual", c:2,  t:"normal"},
+ {id:"audio",  n:"Un audio mío de buenas noches, solo para ti", c:2, t:"normal"},
+ {id:"llamada",n:"Te llamo a la hora que quieras",        c:3,  t:"normal"},
+ {id:"fotopeq",n:"Una foto mía de cuando era pequeño",    c:3,  t:"normal"},
+ {id:"playlist",n:"Una playlist con canciones que me recuerdan a ti", c:4, t:"normal"},
+ {id:"juegos", n:"Una noche jugando a juegos del móvil",  c:5,  t:"normal"},
+ {id:"dibujo", n:"Un dibujo hecho por mí",                c:6,  t:"normal"},
+ {id:"dulces", n:"Una caja sorpresa de dulces",           c:7,  t:"normal"},
+ {id:"perfume",n:"Una carta con mi perfume",              c:8,  t:"normal"},
+ {id:"cancion",n:"Te canto una canción por videollamada, aunque desafine", c:8, t:"normal"},
+ {id:"sudadera",n:"Una sudadera mía, usada",              c:9,  t:"normal"},
+ {id:"comida", n:"Comida a domicilio",                    c:9,  t:"normal"},
+ {id:"peluche",n:"Un peluche de regalo",                  c:10, t:"normal"},
+ {id:"plan",   n:"Elegir el primer plan del reencuentro", c:12, t:"premium"},
+ {id:"redes",  n:"Controlar mis redes durante un día",    c:14, t:"premium"},
+ {id:"trend",  n:"Hacer un trend de TikTok",              c:15, t:"premium"},
+ {id:"perfil", n:"Elegir mi foto de perfil durante una semana", c:16, t:"premium"},
+ {id:"carta",  n:"Una carta escrita a mano que te llega a casa", c:18, t:"premium"},
+ {id:"sentidos",n:"El regalo de los cinco sentidos",      c:20, t:"premium"},
+ {id:"paquete",n:"Un paquete sorpresa enviado a tu casa", c:24, t:"premium"},
+ {id:"finde",  n:"Premio secreto", c:60, t:"premium", oculto:true}   // oculto:true = sale tapado y bloqueado. Quita ", oculto:true" y pon el nombre real cuando quieras desbloquearlo
+];
+const PREMIOS_PROXIMOS = 3;   // cuántas tarjetas de "muy pronto" salen al final
+
+// Una sorpresa por día. d = día en que se abre (AAAA-MM-DD, una por día) · tipo = lo que es. Los días que aún no han llegado salen con candado.
+//   tipo "frase"    → x: la frase · f: firma (opcional)
+//   tipo "rasca"    → x: lo que aparece al rascar
+//   tipo "puzzle"   → foto: nº del motivo (1 a 6) que se convierte en puzle · x: mensaje al completarlo
+//   tipo "memory"   → x: mensaje al ganar (usa las fotos de los 6 motivos)
+//   tipo "atrapa"   → n: corazones que hay que atrapar en 20 segundos · x: mensaje al conseguirlo
+//   tipo "pregunta" → q: pregunta · o: respuestas · a: la correcta (0 = A, 1 = B, 2 = C) · x: mensaje al acertar
+// Para probarlo tú, abre el html con  ?dia=2026-10-05  al final de la dirección y verás cómo se ve ese día.
+const DIAS = [
+ {d:"2026-09-30", tipo:"parejas", x:"Hoy ya has jugado. Mañana hay otra sorpresa."},
+ {d:"2026-10-02", tipo:"pregunta", q:"¿Cómo se rompió la ceja Rafa?", o:["Contra un árbol","De un cabezazo jugando al fútbol","Se cayó","Un gitano le pegó"], a:0, x:""},
+ {d:"2026-10-03", tipo:"puzzle", foto:1, x:"Siempre merece la pena ir a donde tú estés."},
+ {d:"2026-10-04", tipo:"pregunta", q:"¿Cuál es la serie favorita de Rafa?", o:["Stranger Things","Breaking Bad","From","Juego de Tronos"], a:1, x:""},
+ {d:"2026-10-05", tipo:"pregunta", q:"¿Cuál es mi momento favorito del día?", o:["Cuando suena el despertador","Cuando por fin nos hacemos la videollamada","Cuando llego a casa"], a:1, x:"Y aunque acabe reventado, no me lo pierdo por nada."},
+ {d:"2026-10-06", tipo:"memory", x:"Buen ojo. Ahora quiero tener más fotos contigo."},
+ {d:"2026-10-08", tipo:"atrapa", n:12, x:"Has atrapado todos los que necesitaba, y aun así me quedo con el que llevas tú."},
+ {d:"2026-10-09", tipo:"rasca", x:"Hoy te toca elegir la película. Sin protestas."},
+ {d:"2026-10-10", tipo:"puzzle", foto:6, x:"Cada día me quedan menos despedidas."},
+ {d:"2026-10-13", tipo:"atrapa", n:14, x:"Ya los tienes todos. El mío lo tenías desde hace tiempo."},
+ {d:"2026-10-14", tipo:"rasca", x:"Vale por un mensaje de buenas noches, pero de los largos."},
+ {d:"2026-10-15", tipo:"puzzle", foto:2, x:"Contigo todo encaja, hasta cuando parecía imposible."},
+ {d:"2026-10-17", tipo:"pregunta", q:"¿Qué es lo que más quiero que pase pronto?", o:["Ganar la lotería","Que vivamos juntos","Dormir doce horas seguidas"], a:1, x:"Ese es el plan. Todo lo demás es secundario."},
+ {d:"2026-10-18", tipo:"memory", x:"Seis fotos y ninguna me sobra."},
+ {d:"2026-10-20", tipo:"atrapa", n:15, x:"Ni un corazón se te ha escapado. Como a mí tú."},
+ {d:"2026-10-21", tipo:"rasca", x:"Vale por un plan para el próximo viaje, elegido por ti."},
+ {d:"2026-10-22", tipo:"puzzle", foto:4, x:"Siempre en el mismo equipo."},
+ {d:"2026-10-24", tipo:"pregunta", q:"¿Cuánto aguantaría yo sin hablar contigo?", o:["Un día entero","Ni una hora, jajaja","Una semana"], a:1, x:"Cada mensaje tuyo me alegra el día."},
+ {d:"2026-10-25", tipo:"memory", x:"Bien hecho. Yo, de memoria, me sé tu sonrisa."},
+ {d:"2026-10-27", tipo:"atrapa", n:16, x:"Son todos tuyos, igual que yo."},
+ {d:"2026-10-28", tipo:"rasca", x:"Vale por un abrazo larguísimo en cuanto nos veamos."},
+ {d:"2026-10-29", tipo:"puzzle", foto:5, x:"Tú, tal y como eres. Eso es lo que quiero."},
+ {d:"2026-10-30", tipo:"pregunta", q:"¿Qué me quita el estrés de golpe?", o:["Una siesta","Hablar contigo","Salir a correr"], a:1, x:"Contigo todo pesa un poquito menos."},
+];
+
 /* =====================================================
    A PARTIR DE AQUÍ NO HACE FALTA TOCAR NADA
 ===================================================== */
@@ -507,6 +744,224 @@ CHAPTERS.forEach((c,i)=>{
   li.innerHTML = '<a href="#c'+(i+1)+'"><span class="num">0'+(i+1)+'</span><span>'+(c.t[0]+' '+c.t[1].replace(/^(.)/,m=>m.toLowerCase())).trim()+'</span></a>';
   $("#list").appendChild(li);
 });
+/* lo que me enamoró: aparece tras el último motivo y se abre a la vez que el final */
+const enam = document.createElement("section");
+enam.className = "enamoro locked"; enam.id = "enamoro";
+enam.innerHTML = '<div class="enin"><h3 class="ftitle reveal">Lo que me enamoró</h3><p class="fsub reveal d1s">Toca cada carta para darle la vuelta.</p><div class="engrid reveal d1s"></div></div>';
+ENAMORO.forEach((c,i)=>{
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "fcard"; b.setAttribute("aria-pressed","false");
+  b.setAttribute("aria-label","Carta "+(i+1)+", girar");
+  b.innerHTML = '<span class="fc-in"><span class="fc-face fc-front"><span class="fc-num"></span><span class="fc-heart">🤍</span><span class="fc-ft"></span></span><span class="fc-face fc-back"><span class="fc-bt"></span></span></span>';
+  $(".fc-num",b).textContent = pad(i+1);
+  $(".fc-ft",b).textContent = c.f || "";
+  $(".fc-bt",b).textContent = c.b || "";
+  b.onclick = ()=>{ const on = b.classList.toggle("on"); b.setAttribute("aria-pressed",on); if(on) burst(b,8); };
+  $(".engrid",enam).appendChild(b);
+});
+fin.before(enam);
+
+/* una sorpresa cada día */
+const PREVIEW = /[?&]dia=(\d{4})-(\d\d)-(\d\d)/.exec(location.search);
+const hoyFn = ()=>{ if(PREVIEW) return new Date(+PREVIEW[1],+PREVIEW[2]-1,+PREVIEW[3]); const n = new Date(); return new Date(n.getFullYear(),n.getMonth(),n.getDate()); };
+const fechaDe = t => { const m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(t); return m ? new Date(+m[1],+m[2]-1,+m[3]) : new Date(9999,0,1); };
+const fmtDia = d => new Intl.DateTimeFormat("es-ES",{day:"numeric",month:"long"}).format(d);
+let DS = {seen:[],done:[]}; try{ DS = Object.assign(DS, JSON.parse(localStorage.getItem("nh_dias")||"{}")); }catch(e){}
+if(!Array.isArray(DS.seen)) DS.seen = []; if(!Array.isArray(DS.done)) DS.done = [];
+const mark = (k,id)=>{ if(DS[k].includes(id)) return; DS[k].push(id); if(PREVIEW) return; try{ localStorage.setItem("nh_dias",JSON.stringify(DS)); }catch(e){} };
+const DL = [...DIAS].sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);
+const DTIPO = {frase:["💌","Una frase"], rasca:["🎟️","Rasca y descubre"], puzzle:["🧩","Un puzle"], memory:["🃏","Memory"], atrapa:["🤍","Atrapa los corazones"], pregunta:["❓","Una pregunta"], parejas:["🎮","Juego de hoy"]};
+const vec = p=>{ const r = Math.floor(p/3), c = p%3, o = []; if(r>0) o.push(p-3); if(r<2) o.push(p+3); if(c>0) o.push(p-1); if(c<2) o.push(p+1); return o; };
+const el = (tag,cls,txt)=>{ const e = document.createElement(tag); if(cls) e.className = cls; if(txt!=null) e.textContent = txt; return e; };
+
+const JUEGOS = {};
+
+JUEGOS.parejas = (box,d,win)=>{
+  const EM = ["🤍","🌙","⭐","🍓","🎂","✉️"], g = el("div","pjg"); box.appendChild(g);
+  const deck = EM.concat(EM); for(let i=deck.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [deck[i],deck[j]] = [deck[j],deck[i]]; }
+  let up = [], lock = false, pares = 0;
+  deck.forEach(e=>{
+    const b = el("button","pjc","?"); b.type = "button"; b.setAttribute("aria-label","Carta");
+    b.onclick = ()=>{
+      if(lock || b.classList.contains("up") || b.classList.contains("ok")) return;
+      b.classList.add("up"); b.textContent = e; up.push([b,e]);
+      if(up.length<2) return;
+      const [[b1,e1],[b2,e2]] = up; up = [];
+      if(e1===e2){ b1.classList.replace("up","ok"); b2.classList.replace("up","ok"); if(++pares===EM.length) setTimeout(()=>{ win(true); burst(g,22); },500); }
+      else{ lock = true; setTimeout(()=>{ [b1,b2].forEach(x=>{ x.classList.remove("up"); x.textContent = "?"; }); lock = false; },800); }
+    };
+    g.appendChild(b);
+  });
+};
+
+JUEGOS.rasca = (box,d,win)=>{
+  const w = el("div","rasca"); w.appendChild(el("div","rtxt",d.x||"")); const cv = document.createElement("canvas");
+  cv.setAttribute("aria-label","Rasca con el dedo"); w.appendChild(cv); box.appendChild(w);
+  const dpr = Math.min(2,window.devicePixelRatio||1), W = w.clientWidth||300, H = w.clientHeight||150, ctx = cv.getContext("2d");
+  cv.width = W*dpr; cv.height = H*dpr; ctx.scale(dpr,dpr);
+  const g = ctx.createLinearGradient(0,0,W,H); g.addColorStop(0,"#cbbba8"); g.addColorStop(.5,"#e3d6c6"); g.addColorStop(1,"#bfae9a");
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  ctx.fillStyle = "rgba(90,75,62,.6)"; ctx.font = "600 28px Caveat, cursive"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText("Rasca aquí 🤍",W/2,H/2);
+  let down = false, last = null, hecho = false, n = 0;
+  const medir = ()=>{ if(hecho) return; const im = ctx.getImageData(0,0,cv.width,cv.height).data; let t = 0, c = 0;
+    for(let y=0;y<cv.height;y+=12) for(let x=0;x<cv.width;x+=12){ t++; if(im[(y*cv.width+x)*4+3]<40) c++; }
+    if(c/t>.5){ hecho = true; cv.classList.add("off"); setTimeout(()=>cv.remove(),700); burst(w,20); win(true); } };
+  const raya = e=>{ const r = cv.getBoundingClientRect(), p = [(e.clientX-r.left)*W/r.width,(e.clientY-r.top)*H/r.height];
+    ctx.globalCompositeOperation = "destination-out"; ctx.lineWidth = 44; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    ctx.beginPath(); const q = last||p; ctx.moveTo(q[0],q[1]); ctx.lineTo(p[0],p[1]); ctx.stroke(); last = p; if(++n%6===0) medir(); };
+  cv.addEventListener("pointerdown",e=>{ e.preventDefault(); try{ cv.setPointerCapture(e.pointerId); }catch(x){} down = true; last = null; raya(e); });
+  cv.addEventListener("pointermove",e=>{ if(down) raya(e); });
+  const fin_ = ()=>{ down = false; last = null; medir(); };
+  cv.addEventListener("pointerup",fin_); cv.addEventListener("pointercancel",fin_);
+};
+
+JUEGOS.puzzle = (box,d,win)=>{
+  const src = CHAPTERS[Math.max(0,Math.min(CHAPTERS.length-1,(d.foto||1)-1))].img;
+  const w = el("div","pz"); w.appendChild(el("p","pzi","Toca las piezas junto al hueco para ordenar la foto."));
+  const bd = el("div","pzb"); w.appendChild(bd);
+  const inf = el("p","pzi","Movimientos: "); const cnt = el("b",null,"0"); inf.appendChild(cnt); w.appendChild(inf); box.appendChild(w);
+  const go = url=>{
+    bd.style.setProperty("--img",'url("'+url+'")');
+    let orden = [0,1,2,3,4,5,6,7,8], mov = 0, activo = true;
+    const resuelto = ()=>orden.every((v,i)=>v===i);
+    do{ let h = 8, prev = -1; orden = [0,1,2,3,4,5,6,7,8];
+      for(let k=0;k<90;k++){ const v = vec(h).filter(x=>x!==prev), s = v[Math.floor(Math.random()*v.length)]; [orden[h],orden[s]] = [orden[s],orden[h]]; prev = h; h = s; }
+    }while(resuelto());
+    const pintar = ()=>{
+      bd.innerHTML = ""; bd.classList.toggle("win",!activo);
+      orden.forEach((pz,pos)=>{
+        const b = el("button","pt"+(pz===8&&activo?" hueco":"")); b.type = "button"; b.setAttribute("aria-label","Pieza "+(pz+1));
+        b.style.backgroundPosition = (pz%3*50)+"% "+(Math.floor(pz/3)*50)+"%";
+        if(!activo || pz===8) b.disabled = true;
+        b.onclick = ()=>{ if(!activo) return; const h = orden.indexOf(8); if(!vec(h).includes(pos)) return;
+          [orden[h],orden[pos]] = [orden[pos],orden[h]]; mov++; cnt.textContent = mov;
+          if(resuelto()){ activo = false; pintar(); win(); } else pintar(); };
+        bd.appendChild(b);
+      });
+    };
+    pintar();
+  };
+  const im = new Image();
+  im.onload = ()=>{ try{ const s = Math.min(im.naturalWidth,im.naturalHeight), cv = document.createElement("canvas"); cv.width = cv.height = Math.min(720,s);
+    cv.getContext("2d").drawImage(im,(im.naturalWidth-s)/2,(im.naturalHeight-s)/2,s,s,0,0,cv.width,cv.height); go(cv.toDataURL("image/jpeg",.88)); }catch(e){ go(src); } };
+  im.onerror = ()=>go(src); im.src = src;
+};
+
+JUEGOS.memory = (box,d,win)=>{
+  const fotos = CHAPTERS.map(c=>c.img);
+  const w = el("div","mm"); const g = el("div","mmg"); w.appendChild(g);
+  const inf = el("p","pzi","Intentos: "); const cnt = el("b",null,"0"); inf.appendChild(cnt); w.appendChild(inf); box.appendChild(w);
+  const cartas = [...fotos,...fotos].map((s,i)=>({s,k:i%fotos.length}));
+  for(let i=cartas.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [cartas[i],cartas[j]] = [cartas[j],cartas[i]]; }
+  let abiertas = [], bloqueo = false, aciertos = 0, intentos = 0;
+  cartas.forEach(c=>{
+    const b = el("button","mc"); b.type = "button"; b.setAttribute("aria-label","Carta");
+    b.innerHTML = '<span class="mc-in"><span class="mc-f">🤍</span><span class="mc-b"><img alt=""></span></span>';
+    $("img",b).src = c.s;
+    b.onclick = ()=>{
+      if(bloqueo || b.classList.contains("on")) return;
+      b.classList.add("on"); abiertas.push([b,c]);
+      if(abiertas.length<2) return;
+      intentos++; cnt.textContent = intentos;
+      const [[b1,c1],[b2,c2]] = abiertas;
+      if(c1.k===c2.k){ b1.classList.add("ok"); b2.classList.add("ok"); abiertas = []; if(++aciertos===fotos.length) setTimeout(()=>win(),600); }
+      else{ bloqueo = true; setTimeout(()=>{ b1.classList.remove("on"); b2.classList.remove("on"); abiertas = []; bloqueo = false; },850); }
+    };
+    g.appendChild(b);
+  });
+};
+
+JUEGOS.atrapa = (box,d,win)=>{
+  const meta = d.n||12, dur = 20;
+  const w = el("div","at"); const inf = el("p","pzi","Corazones: "); const sc = el("b",null,"0"); inf.appendChild(sc);
+  inf.appendChild(document.createTextNode(" / "+meta+" · ")); const tm = el("b",null,String(dur)); inf.appendChild(tm); inf.appendChild(document.createTextNode(" s"));
+  const zona = el("div","atz"); const btn = el("button","btn atb","Empezar"); btn.type = "button";
+  w.appendChild(inf); w.appendChild(zona); w.appendChild(btn); box.appendChild(w);
+  let n = 0, t = dur, spawn, tick, vivo = false;
+  const parar = ()=>{ vivo = false; clearInterval(spawn); clearInterval(tick); zona.innerHTML = ""; };
+  btn.onclick = ()=>{
+    n = 0; sc.textContent = "0"; t = dur; tm.textContent = t; vivo = true; btn.hidden = true; zona.innerHTML = "";
+    const soltar = ()=>{ if(!vivo) return; const h = el("button","ah","🤍"); h.type = "button"; h.setAttribute("aria-label","Corazón");
+      h.style.left = (Math.random()*80)+"%"; const s = 2.2+Math.random()*1.6; h.style.animationDuration = s+"s";
+      h.onpointerdown = e=>{ e.preventDefault(); if(!vivo || h.classList.contains("pop")) return; n++; sc.textContent = n; h.classList.add("pop"); burst(h,3); setTimeout(()=>h.remove(),200); };
+      zona.appendChild(h); setTimeout(()=>h.remove(),s*1000); };
+    soltar(); spawn = setInterval(soltar,650);
+    tick = setInterval(()=>{ t--; tm.textContent = Math.max(0,t);
+      if(t<=0){ const ok = n>=meta; parar(); if(ok) win(); else{ btn.hidden = false; btn.textContent = "Has atrapado "+n+". Otra vez"; } } },1000);
+  };
+};
+
+JUEGOS.pregunta = (box,d,win)=>{
+  const w = el("div","dq"); w.appendChild(el("h4",null,d.q||"")); const msg = el("div","dqm"); let fallos = 0;
+  (d.o||[]).forEach((t,i)=>{
+    const b = el("button","opt"); b.type = "button"; b.innerHTML = "<b>"+"ABCD"[i]+"</b><span></span>"; b.lastChild.textContent = t;
+    b.onclick = ()=>{
+      if(i===d.a){ $$(".opt",w).forEach(x=>x.disabled = true); b.classList.add("ok"); msg.textContent = ""; win(false,fallos>0); }
+      else{ b.classList.remove("bad"); void b.offsetWidth; b.classList.add("bad"); b.disabled = true; fallos++; msg.textContent = "Esa no es, prueba otra vez."; }
+    };
+    w.appendChild(b);
+  });
+  w.appendChild(msg); box.appendChild(w);
+};
+
+function montarDia(box,d,otra){
+  box.innerHTML = "";
+  if(!JUEGOS[d.tipo]){
+    box.appendChild(el("p","dfrase",d.x||""));
+    if(d.f) box.appendChild(el("span","dfirma",d.f));
+    return;
+  }
+  if(DS.done.includes(d.d) && !otra){
+    if(d.x) box.appendChild(el("p","dmsg",d.x));
+    const b = el("button","btn dagain","Volver a jugar"); b.type = "button"; b.onclick = ()=>montarDia(box,d,true); box.appendChild(b);
+    return;
+  }
+  const win = (solo,medio)=>{ const nuevo = !DS.done.includes(d.d); mark("done",d.d); if(nuevo && !PREVIEW && window.darPunto) window.darPunto(medio?0.5:1); if(!solo){ if(d.x){ const m = el("p","dmsg",d.x); box.appendChild(m); burst(m,22); } else burst(box,22); } };
+  JUEGOS[d.tipo](box,d,win);
+}
+
+const dias = document.createElement("section");
+dias.className = "dias locked"; dias.id = "dias";
+dias.innerHTML = '<div class="din"><h3 class="ftitle reveal">Juegos diarios</h3><p class="fsub reveal d1s" id="dsub">Juega cada día y consigue puntos para canjear premios.</p><div class="pts reveal d1s"><span aria-hidden="true">⭐</span><b class="ptsn">0</b> puntos</div><ol class="dlist reveal d1s" id="dlist"></ol></div>';
+const dlist = $("#dlist",dias);
+const dlink = el("a","dlink"); dlink.id = "dlink"; dlink.href = "#dias"; dlink.hidden = true; $(".index-card").appendChild(dlink);
+
+DL.forEach(d=>{
+  const li = el("li","dia");
+  li.innerHTML = '<button type="button" class="dhead"><span class="dico"></span><span class="dtx"><span class="dn"></span><span class="dti"></span></span><span class="dst"></span></button><div class="dbody" hidden></div>';
+  $(".dhead",li).onclick = ()=>{
+    const f = fechaDe(d.d);
+    if(f > hoyFn()){ toast("Se abre el "+fmtDia(f)); return; }
+    const cuerpo = $(".dbody",li), abrir = cuerpo.hidden;
+    cuerpo.hidden = !abrir;
+    if(abrir){ if(!cuerpo.dataset.ok){ cuerpo.dataset.ok = "1"; montarDia(cuerpo,d); } mark("seen",d.d); }
+    pintarDias();
+  };
+  dlist.appendChild(li);
+});
+
+function pintarDias(){
+  const hoy = hoyFn(); let abiertas = 0, nuevas = 0, ultima = -1;
+  DL.forEach((d,i)=>{
+    const li = dlist.children[i], f = fechaDe(d.d), ok = f <= hoy, esHoy = f.getTime()===hoy.getTime(), tp = DTIPO[d.tipo] || DTIPO.frase;
+    if(ok){ abiertas++; ultima = i; if(!DS.seen.includes(d.d)) nuevas++; }
+    li.classList.toggle("lock",!ok); li.classList.toggle("hoy",ok && esHoy);
+    $(".dn",li).textContent = "Día "+pad(i+1);
+    $(".dico",li).innerHTML = ok ? tp[0] : lockSvg(false);
+    $(".dti",li).textContent = ok ? tp[1] : "Sorpresa";
+    $(".dst",li).textContent = !ok ? "Se abre el "+fmtDia(f) : esHoy ? "Hoy" : DS.seen.includes(d.d) ? "" : "Nueva";
+    $(".dhead",li).setAttribute("aria-expanded",String(!$(".dbody",li).hidden));
+  });
+  dlink.textContent = "🎁 Sorpresa del día"+(nuevas ? " · "+nuevas+(nuevas>1?" nuevas":" nueva") : "");
+  return ultima;
+}
+fin.before(dias);
+pintarDias();
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) pintarDias(); });
+(function medianoche(){ if(PREVIEW) return; const n = new Date(), m = new Date(n.getFullYear(),n.getMonth(),n.getDate()+1,0,0,1);
+  setTimeout(()=>{ pintarDias(); medianoche(); }, m-n); })();
+new IntersectionObserver((es,o)=>{ if(es.some(e=>e.isIntersecting)){ o.disconnect(); const u = pintarDias(); if(u>=0 && $(".dbody",dlist.children[u]).hidden) $(".dhead",dlist.children[u]).click(); } },{threshold:.15}).observe(dias);
 $$(".cover-collage img").forEach(im=>{ im.src = $$(".polaroid .photo img")[+im.dataset.from].src; });
 const chs = $$(".chapter"), lks = $$(".index-list a");
 
@@ -575,7 +1030,7 @@ function render(){
     c.classList.toggle("locked",!open);
     if(!open) c.prepend(gate(i));
   });
-  fin.classList.toggle("locked",done<chs.length);
+  fin.classList.toggle("locked",done<chs.length); enam.classList.toggle("locked",done<chs.length); dias.classList.toggle("locked",done<chs.length); dlink.hidden = done<chs.length;
   $("#prog").textContent = "🤍 "+done+" de "+chs.length; gradeTxt(); $("#prog").classList.toggle("full",done>=chs.length);
   $(".cover-collage").style.setProperty("--blur",(14*(1-done/chs.length)).toFixed(1)+"px");
   lks.forEach((a,i)=>{
@@ -617,7 +1072,17 @@ $("#since").textContent = "Desde el "+START.toLocaleDateString("es-ES",{day:"num
 tick(); setInterval(tick,1000);
 
 /* regalo */
-const wa = t => window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t),"_blank");
+const wa = t => { const u = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t); if(!window.open(u,"_blank")) location.href = u; };
+// Aviso automático (opcional): si rellenas CALLMEBOT_KEY, al canjear te llega el mensaje a tu WhatsApp sin que ella tenga que enviar nada.
+// Cómo conseguir la clave (gratis): desde tu WhatsApp escribe "I allow callmebot to send me messages" al +34 644 52 74 88 y te responde con tu apikey.
+const CALLMEBOT_KEY = "1605398";
+const avisar = t => {
+  if(!CALLMEBOT_KEY || !WHATSAPP){ wa(t); return; }
+  const limpio = t.replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE0F]/gu,"").replace(/\s+/g," ").trim();
+  fetch("https://api.callmebot.com/whatsapp.php?phone=%2B"+WHATSAPP+"&text="+encodeURIComponent(limpio)+"&apikey="+encodeURIComponent(CALLMEBOT_KEY),{mode:"no-cors"})
+    .then(()=>toast("Pedido enviado 🤍"))
+    .catch(()=>{ toast("Sin conexión con el aviso, lo mando por WhatsApp"); wa(t); });
+};
 let canj = []; try{ canj = JSON.parse(localStorage.getItem(KV)||"[]") }catch(e){}
 function drawVales(){
   const box = $("#vales"); box.innerHTML = "";
@@ -626,7 +1091,7 @@ function drawVales(){
     d.innerHTML = "<span></span><button class='btn' type='button'></button>";
     $("span",d).textContent = v; $("button",d).textContent = canj.includes(i) ? "Pedido" : "Canjear";
     $("button",d).onclick = ()=>{
-      wa("Rafa, quiero canjear mi vale: "+v+" 🤍");
+      avisar("Rafa, quiero canjear mi vale: "+v+" 🤍");
       if(!canj.includes(i)){ canj.push(i); try{ localStorage.setItem(KV,JSON.stringify(canj)) }catch(e){} drawVales(); }
     };
     box.appendChild(d);
@@ -637,6 +1102,12 @@ $("#gift").onclick = function(){
   this.classList.add("open"); burst(this,24);
   $("#giftSub").textContent = "Elige uno.";
   setTimeout(()=>{ drawVales(); $("#vales").hidden = false; },700);
+};
+const ask = (txt,ok)=>{
+  const o = el("div","mdl"), c = el("div","mdlc"), r = el("div","mdlb"); c.appendChild(el("p",null,txt));
+  const no = el("button","btn","Cancelar"), si = el("button","btn","Sí"); no.type = si.type = "button";
+  no.onclick = ()=>o.remove(); si.onclick = ()=>{ o.remove(); ok(); };
+  r.appendChild(no); r.appendChild(si); c.appendChild(r); o.appendChild(c); document.body.appendChild(o);
 };
 const toast = t=>{ $$(".toast").forEach(x=>x.remove()); const e = document.createElement("div"); e.className = "toast"; e.textContent = t; document.body.appendChild(e); setTimeout(()=>e.remove(),2600); };
 
@@ -1047,14 +1518,146 @@ const BDAY_MSG = "Ya hemos llegado a tu primer cumpleaños juntos y no podía es
 })();
 
 
+/* menú de secciones: cada cosa en su sitio, sin tanto scroll */
+{
+  const T = {hist:[".cover",".index",".chapter"], nos:[".enamoro",".fin>.number",".fin>.final-title",".fin>.final-msg",".fin>.grade",".fin>.heart",".fin>.again"], sor:[],jue:[".dias"]};
+  Object.keys(T).forEach(k=>T[k].forEach(q=>$$(q).forEach(e=>e.classList.add("t-"+k))));
+  const fb = $$(".fblock");
+  [0,1,3,4,5].forEach(i=>fb[i] && fb[i].classList.add("t-nos"));
+  [2,6].forEach(i=>fb[i] && fb[i].classList.add("t-sor"));
+  if(fb[6]) $(".ftitle",fb[6]).textContent = "Tu tarjeta";
+  if(fb[2]){ const sh = el("div","fblock t-sor sorhead"); sh.innerHTML = '<h3 class="ftitle">Tus regalos</h3>'; fb[2].before(sh); }
+  const fin = $("#final"), nav = el("nav","tabs"), B = {}, KS = ["hist","nos","sor","jue","pre"];
+  nav.setAttribute("aria-label","Secciones");
+  const IC = {
+    hist:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 17a3 3 0 0 1 3-3h11"/>',
+    nos:'<path d="M12 20s-7-4.6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.4-7 10-7 10z"/>',
+    sor:'<path d="M4 10h16v10H4z"/><path d="M3 7h18v3H3zM12 7v13"/><path d="M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0"/>',
+    jue:'<path d="M7 8h10a4 4 0 0 1 3.9 4.9l-.8 3.6a2.4 2.4 0 0 1-4.1 1.1L14 16h-4l-2 1.6a2.4 2.4 0 0 1-4.1-1.1l-.8-3.6A4 4 0 0 1 7 8z"/><path d="M8 10.5v3M6.5 12h3"/><path d="M15.5 11h.01M17.5 13h.01"/>',
+    pre:'<path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8M10 17h4"/>'
+  };
+  const LOCK = '<path d="M7 11V8a5 5 0 0 1 10 0v3"/><path d="M6 11h12v9H6z"/>';
+  const ind = el("span","tind"); ind.setAttribute("aria-hidden","true"); nav.appendChild(ind);
+  [["hist","Historia"],["nos","Nosotros"],["sor","Regalos"],["jue","Juegos"],["pre","Premios"]].forEach(([k,t])=>{
+    const b = el("button","tb"); b.type = "button";
+    b.innerHTML = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+IC[k]+'</svg>'+'<span class="tl">'+t+'</span><svg class="lk-ic" viewBox="0 0 24 24" aria-hidden="true">'+LOCK+'</svg>';
+    b.appendChild(el("i")); b.onclick = ()=>go(k); B[k] = b; nav.appendChild(b);
+  });
+  document.body.appendChild(nav);
+  const bloq = ()=>fin.classList.contains("locked");
+  let actual = "hist", prev = bloq();
+  function go(k){
+    if(k!=="hist" && bloq()){ toast("Abre los seis motivos para desbloquear esto"); return; }
+    actual = k; document.body.classList.remove("tab-hist","tab-nos","tab-sor","tab-jue","tab-pre"); document.body.classList.add("tab-"+k);
+    Object.keys(B).forEach(x=>B[x].classList.toggle("on",x===k)); ind.style.transform = "translateX("+KS.indexOf(k)*100+"%)"; scrollTo(0,0);
+  }
+  function sync(){
+    const l = bloq(); B.nos.classList.toggle("lk",l); B.sor.classList.toggle("lk",l); B.jue.classList.toggle("lk",l); B.pre.classList.toggle("lk",l);
+    const m = /(\d+) nuev/.exec(dlink.textContent||""), n = m ? +m[1] : 0, ic = $("i",B.jue); ic.textContent = n||""; ic.hidden = !n;
+    if(prev && !l && actual==="hist"){ toast("Ya se han abierto Nosotros, Regalos y Juegos"); nav.classList.add("pulse"); setTimeout(()=>nav.classList.remove("pulse"),4000); }
+    prev = l;
+  }
+  new MutationObserver(sync).observe(fin,{attributes:true,attributeFilter:["class"]});
+  new MutationObserver(sync).observe(dlink,{childList:true,characterData:true,subtree:true});
+  dlink.addEventListener("click",e=>{ e.preventDefault(); go("jue"); });
+  $(".again").addEventListener("click",()=>go("hist"));
+  document.body.classList.add("tab-hist"); B.hist.classList.add("on"); sync();
+}
+
+/* puntos y premios */
+(()=>{
+  const KP = "nh_pts", TP = /[?&]puntos=(\d+)/.exec(location.search);
+  let P = {pts:0, gastados:[]}; try{ Object.assign(P, JSON.parse(localStorage.getItem(KP)||"{}")); }catch(e){}
+  if(!Array.isArray(P.gastados)) P.gastados = [];
+  if(TP) P.pts = +TP[1];                       // para probar: añade ?puntos=30 al final de la dirección
+  const guardar = ()=>{ if(TP||PREVIEW) return; try{ localStorage.setItem(KP, JSON.stringify(P)); }catch(e){} };
+  const dz = (h,txt,r)=>{
+    h.classList.add("dzp");
+    const d = document.createElement("div"); d.className = "dz"+(r?" r":""); d.setAttribute("aria-hidden","true");
+    d.innerHTML = '<svg class="h" viewBox="0 0 40 36"><path d="M20 33C6 22 2 14 6 8c4-5 11-3 14 3 3-6 10-8 14-3 4 6 0 14-14 25z"/></svg>'+
+      '<svg class="s" viewBox="0 0 40 38"><path d="M20 3l4.5 11.5 12 .6-9.4 7.5 3.2 11.9L20 27.5l-10.3 7 3.2-11.9L3.5 15.1l12-.6z"/></svg>'+
+      '<svg class="ar" viewBox="0 0 56 40"><path d="M4 4C8 22 22 32 46 32M36 24l12 8-12 6"/></svg>'+
+      '<span class="t">'+txt+'</span>';
+    h.prepend(d);
+  };
+  const coste = id => (PREMIOS.find(p=>p.id===id)||{c:0}).c;
+  const libres = ()=> P.pts - P.gastados.reduce((s,id)=>s+coste(id),0);
+  const paint = ()=>{ $$(".ptsn").forEach(e=>e.textContent = String(libres()).replace(".",",")); pintar(); };
+  window.darPunto = (v)=>{ P.pts += (v||1); guardar(); paint(); $$(".pts").forEach(e=>{ e.classList.remove("bump"); void e.offsetWidth; e.classList.add("bump"); }); };
+
+  const ABIERTO = {normal:false, premium:false};
+  function pintar(){
+    const box = $("#prem"); if(!box) return; box.innerHTML = ""; const disp = libres();
+    [["normal","Los del día a día","Se consiguen con pocos puntos."],["premium","Premium",""]].forEach(([t,tit,sub])=>{
+      const it = el("div","dia"+(ABIERTO[t]?" hoy":""));
+      it.innerHTML = '<button type="button" class="dhead"><span class="dico"></span><span class="dtx"><span class="dn"></span><span class="dti"></span></span><span class="dst"></span></button><div class="dbody"></div>';
+      $(".dico",it).textContent = t==="premium"?"👑":"🎁"; $(".dn",it).textContent = t==="premium"?"Los especiales":"Pide sin miedo"; $(".dti",it).textContent = tit;
+      $(".dst",it).textContent = PREMIOS.filter(p=>p.t===t).length+" premios";
+      const cuerpo = $(".dbody",it); cuerpo.hidden = !ABIERTO[t];
+      $(".dhead",it).onclick = ()=>{ ABIERTO[t] = !ABIERTO[t]; cuerpo.hidden = !ABIERTO[t]; it.classList.toggle("hoy",ABIERTO[t]); };
+      const lista = el("div","plist"); cuerpo.appendChild(lista); box.appendChild(it);
+      PREMIOS.filter(p=>p.t===t).forEach(p=>{
+        const tengo = P.gastados.includes(p.id), card = el("div","pcard"+(t==="premium"?" pm":"")+(tengo?" got":""));
+        const h4 = el("h4",null,p.oculto?"Un premio muy muy especial que todavía no puedo contarte":p.n); if(p.oculto){ h4.style.cssText = "filter:blur(6px);-webkit-user-select:none;user-select:none;pointer-events:none"; h4.setAttribute("aria-hidden","true"); } card.appendChild(h4);
+        if(p.oculto) card.appendChild(el("p",null,"🔒 Se desbloqueará más adelante."));
+        const pie = el("div","pfoot"), cs = el("span","pcost"); cs.innerHTML = "<b>"+p.c+"</b> puntos"; pie.appendChild(cs);
+        const b = el("button","btn",tengo?"Pedido":p.oculto?"Bloqueado":"Canjear"); b.type = "button"; b.disabled = tengo || p.oculto || disp<p.c;
+        b.onclick = ()=>{
+          if(libres()<p.c) return;
+          ask("¿Canjear \""+p.n+"\" por "+p.c+" puntos?", ()=>{
+            if(libres()<p.c) return;
+            P.gastados.push(p.id); guardar(); burst(b,18); paint();
+            avisar("Rafa, he canjeado mi premio: "+p.n+" ("+p.c+" puntos) 🤍");
+          });
+        };
+        pie.appendChild(b); card.appendChild(pie);
+        if(!tengo && disp<p.c){ const bar = el("div","pbar"), i = el("i"); i.style.width = Math.max(0,disp)/p.c*100+"%"; bar.appendChild(i); card.appendChild(bar); card.appendChild(el("p",null,"Te faltan "+String(p.c-disp).replace(".",",")+(p.c-disp===1?" punto.":" puntos."))); }
+        lista.appendChild(card);
+      });
+    });
+    if(PREMIOS_PROXIMOS>0){
+      const h = el("h3","ptier","Muy pronto"); dz(h,"shhh, jiji",false); box.appendChild(h);
+      const lista = el("div","plist"); box.appendChild(lista);
+      for(let i=0;i<PREMIOS_PROXIMOS;i++){ const c = el("div","pcard soon"); c.appendChild(el("h4",null,"Premio sorpresa")); c.appendChild(el("p",null,"Todavía no te lo puedo contar.")); lista.appendChild(c); }
+      box.appendChild(el("p","pnote","Iré añadiendo premios nuevos. Guarda tus puntos."));
+    }
+  }
+  paint();
+})();
+
 /* volver a empezar */
 $("#again").onclick = ()=>{
-  if(!confirm("¿Volver a empezar? Se borrará lo que has abierto y los vales que has canjeado.")) return;
+  ask("¿Volver a empezar? Se borrará lo que has abierto y los vales que has canjeado.", ()=>{
   done = 0; canj = []; try{ localStorage.removeItem(KEY); localStorage.removeItem(KV); localStorage.removeItem("nh_fallos") }catch(e){} totalFails = 0;
   $("#gift").classList.remove("open"); $("#vales").hidden = true; $("#giftSub").textContent = "Toca y mira tu regalo";
   window.resetCarta&&resetCarta(); window.resetMap&&resetMap();
   render(); scrollTo({top:0,behavior:"smooth"});
+  });
 };
+</script>
+<script>
+/* dibujitos en Nosotros, Regalos, Juegos y Premios (como los de Historia) */
+(function(){
+  const H = 'M20 33C6 22 2 14 6 8c4-5 11-3 14 3 3-6 10-8 14-3 4 6 0 14-14 25z',
+        S = 'M20 3l4.5 11.5 12 .6-9.4 7.5 3.2 11.9L20 27.5l-10.3 7 3.2-11.9L3.5 15.1l12-.6z',
+        A = 'M4 4C8 22 22 32 46 32M36 24l12 8-12 6';
+  // frase a mano de cada apartado (edítalas a tu gusto)
+  const N = {"La distancia":"te echo de menos","El cielo":"nuestro cielo","Razones para quererte":"hay más, jiji","¿Cuánto me quieres?":"piénsalo bien","Para Lorena":"léela despacio","Lo que me enamoró":"mis favoritas","Tus regalos":"¡ábrelos!","Tu regalo":"elige uno","Tu tarjeta":"muy pronto","Juegos diarios":"¡a jugar!","Premios":"ya casi"};
+  const F = ["jiji 🤍","para ti","mi vida"];
+  const hosts = [...document.querySelectorAll(".fblock")].map(e=>[e,0])
+    .concat([...document.querySelectorAll(".enamoro .enin, .dias .din")].map(e=>[e,1]));
+  hosts.forEach(([h,sec],i)=>{
+    const ti = h.querySelector(".ftitle"), tx = ((ti && ti.textContent) || "").trim();
+    const d = document.createElement("div");
+    d.className = "dz" + (i%2 ? " r" : ""); d.setAttribute("aria-hidden","true");
+    d.innerHTML = '<svg class="h" viewBox="0 0 40 36"><path d="'+H+'"/></svg>'+
+      '<svg class="s" viewBox="0 0 40 38"><path d="'+S+'"/></svg>'+
+      '<svg class="ar" viewBox="0 0 56 40"><path d="'+A+'"/></svg>'+
+      '<span class="t">'+(N[tx] || F[i%F.length])+'</span>';
+    h.classList.add("dzw"); if(sec) h.classList.add("dzs");
+    h.prepend(d);
+  });
+})();
 </script>
 </body>
 </html>
