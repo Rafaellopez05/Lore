@@ -250,11 +250,36 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
 .dd.r .ar{left:auto;right:4%;transform:scaleX(-1)}
 .dd.r .t{left:auto;right:2%;transform:rotate(6deg)}
 .chapter-title:after{content:"";display:block;width:min(170px,60%);height:10px;margin-top:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10'%3E%3Cpath d='M2 6c10-7 18 5 28-1s18 5 28-1 18 5 28-1 18 4 30-1' fill='none' stroke='%23c48f8a' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;background-size:100% 100%}
-.flip{position:absolute;right:8px;bottom:8px;z-index:5;width:40px;height:40px;border-radius:50%;border:1px solid #d9cbbb;background:#fffdf9;color:#8b6f5a;font-size:20px;line-height:1;cursor:pointer;box-shadow:0 3px 8px rgba(70,55,40,.12)}
-.pback{position:absolute;inset:0;z-index:4;display:grid;place-items:center;padding:24px;background:#fffdf5 repeating-linear-gradient(transparent 0,transparent 33px,rgba(194,179,163,.25) 33px,rgba(194,179,163,.25) 34px);border-radius:3px;text-align:center;opacity:0;pointer-events:none;transform:perspective(700px) rotateY(90deg);transition:transform .5s ease,opacity .25s ease;cursor:pointer}
-.pback p{font-family:Caveat,cursive;font-size:clamp(26px,7.5vw,32px);line-height:1.25;color:#5f4f43}
-.polaroid.flipped .pback{opacity:1;pointer-events:auto;transform:perspective(700px) rotateY(0)}
-@media(prefers-reduced-motion:reduce){.pback{transition:none}}
+.flip{position:absolute;right:8px;bottom:8px;z-index:8;width:42px;height:42px;border-radius:50%;border:1px solid #d9cbbb;background:rgba(255,253,249,.94);color:#8b6f5a;font-size:20px;line-height:1;cursor:pointer;box-shadow:0 5px 12px rgba(70,55,40,.14);transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.flip:active{transform:scale(.9) rotate(-12deg)}
+.pback{position:absolute;inset:0;z-index:6;display:grid;place-items:center;padding:30px 28px;background:#fffdf5 repeating-linear-gradient(transparent 0,transparent 33px,rgba(194,179,163,.25) 33px,rgba(194,179,163,.25) 34px);border-radius:3px;text-align:center;opacity:0;pointer-events:none;transform:perspective(900px) rotateY(92deg) rotateZ(1deg) scale(.96);transform-origin:center;filter:blur(2px);transition:transform .72s cubic-bezier(.2,.8,.2,1),opacity .3s ease,filter .5s ease;cursor:pointer;overflow:hidden}
+.pback:before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 18%,rgba(255,255,255,.65) 48%,transparent 72%);transform:translateX(-130%);transition:transform .8s ease .15s;pointer-events:none}
+.pback p{position:relative;z-index:1;font-family:Caveat,cursive;font-size:clamp(26px,7.5vw,32px);line-height:1.25;color:#5f4f43;opacity:0;transform:translateY(12px) rotate(-1deg);filter:blur(3px);transition:opacity .45s ease .24s,transform .55s cubic-bezier(.2,.9,.2,1) .24s,filter .45s ease .24s}
+.polaroid .photo,.polaroid .caption{transition:transform .62s cubic-bezier(.2,.8,.2,1),opacity .3s ease,filter .45s ease}
+.polaroid.flipped .photo,.polaroid.flipped .caption{transform:perspective(900px) rotateY(-18deg) translateX(-8px);opacity:.08;filter:blur(2px)}
+.polaroid.flipped .pback{opacity:1;pointer-events:auto;transform:perspective(900px) rotateY(0) rotateZ(0) scale(1);filter:blur(0)}
+.polaroid.flipped .pback:before{transform:translateX(130%)}
+.polaroid.flipped .pback p{opacity:1;transform:translateY(0) rotate(-1deg);filter:blur(0)}
+@media(prefers-reduced-motion:reduce){.pback,.pback p,.polaroid .photo,.polaroid .caption{transition:none}.pback{filter:none}.pback p{filter:none;transform:none}.polaroid.flipped .photo,.polaroid.flipped .caption{transform:none}}
+
+/* juego especial */
+.dia.special{border-color:#c9aa88;box-shadow:0 14px 34px rgba(125,94,64,.12)}
+.dia.special .dhead{background:linear-gradient(135deg,rgba(248,238,224,.95),rgba(255,253,249,.7))}
+.dia.special .dico{background:#efe0cf;border-radius:50%;padding:6px;min-width:36px;min-height:36px;display:grid;place-items:center}
+.special-game{margin-top:14px;padding:22px 18px;background:linear-gradient(145deg,#fffdf9,#f5ece0);border:1px solid #d9c7b2;border-radius:14px;text-align:center;box-shadow:0 12px 28px rgba(70,55,40,.08)}
+.special-game h4{font-family:Caveat,cursive;font-size:clamp(31px,8vw,40px);color:#5f544b;margin:0 0 4px}
+.special-game .sgsub{margin:0 0 16px;color:#806f60;font-size:13px}
+.special-boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.special-choice{min-height:92px;border:1px solid #d9c7b2;border-radius:12px;background:#fffdf9;font-size:30px;cursor:pointer;box-shadow:0 5px 12px rgba(70,55,40,.07);transition:transform .25s,background .25s}
+.special-choice:active{transform:scale(.94)}
+.special-choice.reveal{background:#f1e4d4;transform:translateY(-4px)}
+.special-result{min-height:30px;margin:14px 0 0;font-family:Caveat,cursive;font-size:26px;color:#6b5d50}
+
+/* premios secretos */
+.pcard.secret{border-color:#c9aa88;background:linear-gradient(#fffdf9,#faf0e2)}
+.secret-badge{display:inline-block;margin-bottom:8px;padding:4px 9px;border-radius:999px;background:#efe0cf;color:#8b6f5a;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.pcard.secret.locked-secret h4{filter:blur(7px);user-select:none}
+.pcard.secret.locked-secret .secret-desc{color:#9a8b7c}
 
 .sello{position:absolute;top:-16px;right:-6px;z-index:3;padding:8px 14px;border:2px dashed #b98f7a;border-radius:8px;background:#fff6ee;color:#a9705a;font-family:Caveat,cursive;font-size:22px;font-weight:700;line-height:1;transform:rotate(8deg);box-shadow:0 4px 10px rgba(70,55,40,.1)}
 @keyframes latido{0%,100%{transform:scale(1)}30%{transform:scale(1.35)}60%{transform:scale(1.1)}}
@@ -313,6 +338,21 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
 .dias.locked{display:none}
 .din{width:min(560px,100%);margin:auto}
 .dlist{list-style:none;margin-top:30px;text-align:left}
+
+.dweeks{margin-top:30px}
+.dweek{margin-top:14px;list-style:none}
+.dweek:first-child{margin-top:0}
+.dweek-toggle{width:100%;display:flex;align-items:center;gap:10px;padding:13px 14px;border:1px solid #e3d8cc;border-radius:16px;background:rgba(255,255,255,.62);color:#5f544b;cursor:pointer;text-align:left;box-shadow:0 4px 14px rgba(82,66,52,.04)}
+.dweek-toggle:active{transform:scale(.99)}
+.dweek-title{font-family:Caveat,cursive;font-size:clamp(27px,7vw,34px);font-weight:600;line-height:1}
+.dweek-sub{margin-left:auto;font-size:11px;letter-spacing:.35px;color:#9a8b7c}
+.dweek-arrow{width:20px;height:20px;display:grid;place-items:center;flex:0 0 20px;border-radius:50%;background:#f1e9df;color:#8c7a69;font-size:13px;transition:transform .25s ease}
+.dweek.open .dweek-arrow{transform:rotate(180deg)}
+.dweek-games{margin:10px 0 0;padding:0;list-style:none}
+.gamepad-ico{width:24px;height:24px;display:block;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.dlink.game-day{display:flex;align-items:center;justify-content:center;gap:9px}
+.dlink.game-day .gamepad-ico{width:19px;height:19px}
+
 .dia{margin-top:14px;background:#fffdf9;border:1px solid rgba(194,179,163,.55);border-radius:6px;box-shadow:0 10px 26px rgba(70,55,40,.08);overflow:hidden}
 .dia.lock{opacity:.6}
 .dia.hoy{border-color:#cdbfaf;box-shadow:0 14px 34px rgba(70,55,40,.16)}
@@ -360,13 +400,14 @@ input[type=range]{width:100%;max-width:360px;accent-color:#a78e7b;height:32px}
 .dlink[hidden]{display:none}
 body.tab-hist .t-nos,body.tab-hist .t-sor,body.tab-hist .t-jue,body.tab-hist .t-pre,body.tab-nos .t-hist,body.tab-nos .t-sor,body.tab-nos .t-jue,body.tab-nos .t-pre,body.tab-sor .t-hist,body.tab-sor .t-nos,body.tab-sor .t-jue,body.tab-sor .t-pre,body.tab-jue .t-hist,body.tab-jue .t-nos,body.tab-jue .t-sor,body.tab-jue .t-pre,body.tab-pre .t-hist,body.tab-pre .t-nos,body.tab-pre .t-sor,body.tab-pre .t-jue{display:none!important}
 body.tab-hist .final,body.tab-jue .final,body:not(.tab-hist) .prog{display:none}
-body{padding-bottom:104px}
+body{padding-bottom:92px}
 body.intro .tabs{display:none}
-.tabs{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:45;width:min(480px,calc(100% - 20px));display:flex;padding:6px;border-radius:28px;background:rgba(255,253,249,.82);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(194,179,163,.55);box-shadow:0 12px 34px rgba(70,55,40,.16)}
-.tind{position:absolute;top:6px;bottom:6px;left:6px;width:calc((100% - 12px)/5);border-radius:22px;background:#efe3d3;box-shadow:inset 0 0 0 1px rgba(194,179,163,.5);transition:transform .38s cubic-bezier(.3,1.25,.4,1);z-index:0}
-.tb{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:56px;border:0;background:none;padding:9px 2px 8px;font:inherit;color:#9a8b7c;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .25s,opacity .25s}
-.tb .ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
-.tb .tl{font-size:10px;font-weight:600;letter-spacing:.02em}
+.tabs{position:fixed;left:50%;bottom:max(9px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:45;width:min(430px,calc(100% - 28px));display:flex;padding:4px;border-radius:24px;background:rgba(255,253,249,.68);-webkit-backdrop-filter:blur(18px) saturate(1.35);backdrop-filter:blur(18px) saturate(1.35);border:1px solid rgba(194,179,163,.42);box-shadow:0 8px 26px rgba(70,55,40,.12);transition:transform .42s cubic-bezier(.22,.8,.3,1),opacity .3s ease}
+.tabs.hide-dock{transform:translate(-50%,calc(100% + 18px));opacity:.2;pointer-events:none}
+.tind{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px)/5);border-radius:20px;background:rgba(239,227,211,.82);box-shadow:inset 0 0 0 1px rgba(194,179,163,.42);transition:transform .38s cubic-bezier(.3,1.25,.4,1);z-index:0}
+.tb{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:48px;border:0;background:none;padding:7px 2px 6px;font:inherit;color:#9a8b7c;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .25s,opacity .25s}
+.tb .ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.tb .tl{font-size:9px;font-weight:600;letter-spacing:.02em}
 .tb .em{display:block;width:22px;height:22px;font-size:19px;line-height:22px;text-align:center;filter:grayscale(.4);transition:transform .3s,filter .3s}
 .tb.on .em{filter:none;transform:translateY(-1px) scale(1.1)}
 .tb.on{color:#5f4f43}
@@ -379,7 +420,8 @@ body.intro .tabs{display:none}
 .tabs.pulse .tb:not(.on):not(.lk) .ic{animation:bob .7s ease 3}
 @keyframes bob{50%{transform:translateY(-6px)}}
 @media(prefers-reduced-motion:reduce){.tind,.tb .ic{transition:none}.tabs.pulse .ic{animation:none!important}}
-.toast{bottom:calc(100px + env(safe-area-inset-bottom))}
+.toast{bottom:calc(86px + env(safe-area-inset-bottom))}
+@media(max-width:520px){.tabs{width:calc(100% - 22px);bottom:max(7px,env(safe-area-inset-bottom));}.tb{min-height:46px;padding:6px 1px 5px}.tb .ic{width:19px;height:19px}.tb .tl{font-size:8.5px}.tb .lk-ic{top:3px}}
 /* premios (bloqueado) */
 .fblock.t-pre,.fblock.sorhead{margin-top:0;border-top:0;padding-top:0}
 .prize{position:relative;width:min(520px,100%);margin:26px auto 0;padding:34px clamp(20px,6vw,40px);background:#f6f0e8;border:1px dashed rgba(167,142,123,.7);border-radius:14px;text-align:center;cursor:pointer;box-shadow:0 20px 40px rgba(70,55,40,.08)}
@@ -665,6 +707,8 @@ const PREMIOS = [
  {id:"sudadera",n:"Una sudadera mía, usada",              c:9,  t:"normal"},
  {id:"comida", n:"Comida a domicilio",                    c:9,  t:"normal"},
  {id:"peluche",n:"Un peluche de regalo",                  c:10, t:"normal"},
+  {id:"video",  n:"Un vídeo mío solo para ti",              c:11, t:"normal"},
+ {id:"capricho",n:"Te invito a un caprichito porque sí",   c:12, t:"normal"},
  {id:"plan",   n:"Elegir el primer plan del reencuentro", c:12, t:"premium"},
  {id:"redes",  n:"Controlar mis redes durante un día",    c:14, t:"premium"},
  {id:"trend",  n:"Hacer un trend de TikTok",              c:15, t:"premium"},
@@ -672,7 +716,10 @@ const PREMIOS = [
  {id:"carta",  n:"Una carta escrita a mano que te llega a casa", c:18, t:"premium"},
  {id:"sentidos",n:"El regalo de los cinco sentidos",      c:20, t:"premium"},
  {id:"paquete",n:"Un paquete sorpresa enviado a tu casa", c:24, t:"premium"},
- {id:"finde",  n:"Premio secreto", c:60, t:"premium", oculto:true}   // oculto:true = sale tapado y bloqueado. Quita ", oculto:true" y pon el nombre real cuando quieras desbloquearlo
+ {id:"secreto1",n:"Una sorpresa que te tengo preparada y no te voy a contar", c:15, t:"premium", oculto:true, secreto:true, minPts:15},
+ {id:"secreto2",n:"Un premio que solo podrás descubrir al llegar a 25 puntos", c:20, t:"premium", oculto:true, secreto:true, minPts:25},
+ {id:"secreto3",n:"El premio que llevo tiempo queriendo darte", c:30, t:"premium", oculto:true, secreto:true, minPts:40},
+ {id:"finde",  n:"Premio secreto", c:60, t:"premium", oculto:true, secreto:true, minPts:60}   // oculto:true = sale tapado y bloqueado. Quita ", oculto:true" y pon el nombre real cuando quieras desbloquearlo
 ];
 const PREMIOS_PROXIMOS = 3;   // cuántas tarjetas de "muy pronto" salen al final
 
@@ -770,7 +817,9 @@ let DS = {seen:[],done:[]}; try{ DS = Object.assign(DS, JSON.parse(localStorage.
 if(!Array.isArray(DS.seen)) DS.seen = []; if(!Array.isArray(DS.done)) DS.done = [];
 const mark = (k,id)=>{ if(DS[k].includes(id)) return; DS[k].push(id); if(PREVIEW) return; try{ localStorage.setItem("nh_dias",JSON.stringify(DS)); }catch(e){} };
 const DL = [...DIAS].sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);
-const DTIPO = {frase:["💌","Una frase"], rasca:["🎟️","Rasca y descubre"], puzzle:["🧩","Un puzle"], memory:["🃏","Memory"], atrapa:["🤍","Atrapa los corazones"], pregunta:["❓","Una pregunta"], parejas:["🎮","Juego de hoy"]};
+DL.forEach((d,i)=>{ d.especial = (i+1)%5===0; });
+const GAMEPAD = '<svg class="gamepad-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 3.9 4.9l-.8 3.6a2.4 2.4 0 0 1-4.1 1.1L14 16h-4l-2 1.6a2.4 2.4 0 0 1-4.1-1.1l-.8-3.6A4 4 0 0 1 7 8z"/><path d="M8 10.5v3M6.5 12h3M15.5 11h.01M17.5 13h.01"/></svg>';
+const DTIPO = {frase:["💌","Una frase"], rasca:["🎟️","Rasca y descubre"], puzzle:["🧩","Un puzle"], memory:["🃏","Memory"], atrapa:["🤍","Atrapa los corazones"], pregunta:["❓","Una pregunta"], parejas:[GAMEPAD,"Juego de hoy"], especial:["✦","Juego especial"]};
 const vec = p=>{ const r = Math.floor(p/3), c = p%3, o = []; if(r>0) o.push(p-3); if(r<2) o.push(p+3); if(c>0) o.push(p-1); if(c<2) o.push(p+1); return o; };
 const el = (tag,cls,txt)=>{ const e = document.createElement(tag); if(cls) e.className = cls; if(txt!=null) e.textContent = txt; return e; };
 
@@ -892,6 +941,30 @@ JUEGOS.atrapa = (box,d,win)=>{
   };
 };
 
+JUEGOS.especial = (box,d,win)=>{
+  const w = el("div","special-game");
+  w.appendChild(el("h4",null,"Juego especial 🤍"));
+  w.appendChild(el("p","sgsub","Elige una de las tres y a ver qué te toca."));
+  const g = el("div","special-boxes");
+  const res = el("p","special-result");
+  const premios = [
+    "Un beso pendiente para cuando nos veamos.",
+    "Hoy tienes derecho a elegir el plan.",
+    "Te toca un mensaje mío de los largos esta noche."
+  ];
+  const premio = premios[Math.floor(Math.random()*premios.length)];
+  ["🎁","💌","🤍"].forEach((ico,i)=>{
+    const b = el("button","special-choice",ico); b.type="button"; b.setAttribute("aria-label","Elegir sorpresa "+(i+1));
+    b.onclick=()=>{
+      if(b.disabled) return;
+      $$(".special-choice",g).forEach(x=>x.disabled=true); b.classList.add("reveal");
+      res.textContent = premio; burst(b,18); win(false,false,1);
+    };
+    g.appendChild(b);
+  });
+  w.appendChild(g); w.appendChild(res); box.appendChild(w);
+};
+
 JUEGOS.pregunta = (box,d,win)=>{
   const w = el("div","dq"); w.appendChild(el("h4",null,d.q||"")); const msg = el("div","dqm"); let fallos = 0;
   (d.o||[]).forEach((t,i)=>{
@@ -917,17 +990,42 @@ function montarDia(box,d,otra){
     const b = el("button","btn dagain","Volver a jugar"); b.type = "button"; b.onclick = ()=>montarDia(box,d,true); box.appendChild(b);
     return;
   }
-  const win = (solo,medio)=>{ const nuevo = !DS.done.includes(d.d); mark("done",d.d); if(nuevo && !PREVIEW && window.darPunto) window.darPunto(medio?0.5:1); if(!solo){ if(d.x){ const m = el("p","dmsg",d.x); box.appendChild(m); burst(m,22); } else burst(box,22); } };
-  JUEGOS[d.tipo](box,d,win);
+  const win = (solo,medio,bonus=0)=>{ const nuevo = !DS.done.includes(d.d); mark("done",d.d); if(nuevo && !PREVIEW && window.darPunto) window.darPunto((medio?0.5:1)+bonus); if(!solo){ if(d.x){ const m = el("p","dmsg",d.x); box.appendChild(m); burst(m,22); } else burst(box,22); } };
+  const juego = d.especial ? "especial" : d.tipo;
+  JUEGOS[juego](box,d,win);
 }
 
 const dias = document.createElement("section");
 dias.className = "dias locked"; dias.id = "dias";
-dias.innerHTML = '<div class="din"><h3 class="ftitle reveal">Juegos diarios</h3><p class="fsub reveal d1s" id="dsub">Juega cada día y consigue puntos para canjear premios.</p><div class="pts reveal d1s"><span aria-hidden="true">⭐</span><b class="ptsn">0</b> puntos</div><ol class="dlist reveal d1s" id="dlist"></ol></div>';
+dias.innerHTML = '<div class="din"><h3 class="ftitle reveal">Juegos</h3><p class="fsub reveal d1s" id="dsub">Juega cada día y consigue puntos para canjear premios.</p><div class="pts reveal d1s"><span aria-hidden="true">⭐</span><b class="ptsn">0</b> puntos</div><ol class="dlist reveal d1s" id="dlist"></ol></div>';
 const dlist = $("#dlist",dias);
+dlist.classList.add("dweeks");
+const ditems = [];
 const dlink = el("a","dlink"); dlink.id = "dlink"; dlink.href = "#dias"; dlink.hidden = true; $(".index-card").appendChild(dlink);
 
-DL.forEach(d=>{
+DL.forEach((d,i)=>{
+  if(i % 7 === 0){
+    const week = el("li","dweek");
+    const num = Math.floor(i/7)+1;
+    const from = i+1;
+    const to = Math.min(i+7, DL.length);
+    const toggle = el("button","dweek-toggle");
+    toggle.type = "button";
+    toggle.setAttribute("aria-expanded", num === 1 ? "true" : "false");
+    toggle.innerHTML = '<span class="dweek-arrow">⌄</span><span class="dweek-title">Semana '+num+'</span><span class="dweek-sub">Juegos '+from+'–'+to+'</span>';
+    const games = el("ol","dweek-games");
+    games.hidden = num !== 1;
+    toggle.onclick = ()=>{
+      const abrir = games.hidden;
+      games.hidden = !abrir;
+      week.classList.toggle("open", abrir);
+      toggle.setAttribute("aria-expanded", String(abrir));
+    };
+    week.classList.toggle("open", num === 1);
+    week.appendChild(toggle);
+    week.appendChild(games);
+    dlist.appendChild(week);
+  }
   const li = el("li","dia");
   li.innerHTML = '<button type="button" class="dhead"><span class="dico"></span><span class="dtx"><span class="dn"></span><span class="dti"></span></span><span class="dst"></span></button><div class="dbody" hidden></div>';
   $(".dhead",li).onclick = ()=>{
@@ -938,22 +1036,26 @@ DL.forEach(d=>{
     if(abrir){ if(!cuerpo.dataset.ok){ cuerpo.dataset.ok = "1"; montarDia(cuerpo,d); } mark("seen",d.d); }
     pintarDias();
   };
-  dlist.appendChild(li);
+  const weekGames = dlist.lastElementChild && $(".dweek-games",dlist.lastElementChild);
+  (weekGames || dlist).appendChild(li);
+  ditems.push(li);
 });
 
 function pintarDias(){
   const hoy = hoyFn(); let abiertas = 0, nuevas = 0, ultima = -1;
   DL.forEach((d,i)=>{
-    const li = dlist.children[i], f = fechaDe(d.d), ok = f <= hoy, esHoy = f.getTime()===hoy.getTime(), tp = DTIPO[d.tipo] || DTIPO.frase;
+    const li = ditems[i], f = fechaDe(d.d), ok = f <= hoy, esHoy = f.getTime()===hoy.getTime(), tp = DTIPO[d.tipo] || DTIPO.frase;
     if(ok){ abiertas++; ultima = i; if(!DS.seen.includes(d.d)) nuevas++; }
-    li.classList.toggle("lock",!ok); li.classList.toggle("hoy",ok && esHoy);
+    li.classList.toggle("lock",!ok); li.classList.toggle("hoy",ok && esHoy); li.classList.toggle("special",!!d.especial);
     $(".dn",li).textContent = "Día "+pad(i+1);
-    $(".dico",li).innerHTML = ok ? tp[0] : lockSvg(false);
-    $(".dti",li).textContent = ok ? tp[1] : "Sorpresa";
+    const tipo = d.especial ? DTIPO.especial : tp;
+    $(".dico",li).innerHTML = ok ? tipo[0] : lockSvg(false);
+    $(".dti",li).textContent = ok ? tipo[1] : "Sorpresa";
     $(".dst",li).textContent = !ok ? "Se abre el "+fmtDia(f) : esHoy ? "Hoy" : DS.seen.includes(d.d) ? "" : "Nueva";
     $(".dhead",li).setAttribute("aria-expanded",String(!$(".dbody",li).hidden));
   });
-  dlink.textContent = "🎁 Sorpresa del día"+(nuevas ? " · "+nuevas+(nuevas>1?" nuevas":" nueva") : "");
+  dlink.classList.add("game-day");
+  dlink.innerHTML = '<svg class="gamepad-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 3.9 4.9l-.8 3.6a2.4 2.4 0 0 1-4.1 1.1L14 16h-4l-2 1.6a2.4 2.4 0 0 1-4.1-1.1l-.8-3.6A4 4 0 0 1 7 8z"/><path d="M8 10.5v3M6.5 12h3M15.5 11h.01M17.5 13h.01"/></svg><span>Juego del día</span>'+(nuevas ? " · "+nuevas+(nuevas>1?" nuevos":" nuevo") : "");
   return ultima;
 }
 fin.before(dias);
@@ -961,7 +1063,7 @@ pintarDias();
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden) pintarDias(); });
 (function medianoche(){ if(PREVIEW) return; const n = new Date(), m = new Date(n.getFullYear(),n.getMonth(),n.getDate()+1,0,0,1);
   setTimeout(()=>{ pintarDias(); medianoche(); }, m-n); })();
-new IntersectionObserver((es,o)=>{ if(es.some(e=>e.isIntersecting)){ o.disconnect(); const u = pintarDias(); if(u>=0 && $(".dbody",dlist.children[u]).hidden) $(".dhead",dlist.children[u]).click(); } },{threshold:.15}).observe(dias);
+new IntersectionObserver((es,o)=>{ if(es.some(e=>e.isIntersecting)){ o.disconnect(); const u = pintarDias(); if(u>=0 && $(".dbody",ditems[u]).hidden) $(".dhead",ditems[u]).click(); } },{threshold:.15}).observe(dias);
 $$(".cover-collage img").forEach(im=>{ im.src = $$(".polaroid .photo img")[+im.dataset.from].src; });
 const chs = $$(".chapter"), lks = $$(".index-list a");
 
@@ -1546,6 +1648,14 @@ const BDAY_MSG = "Ya hemos llegado a tu primer cumpleaños juntos y no podía es
   document.body.appendChild(nav);
   const bloq = ()=>fin.classList.contains("locked");
   let actual = "hist", prev = bloq();
+  let lastY = window.scrollY, hideTimer;
+  const dock = ()=>{
+    if(!nav || window.scrollY < 80){ nav.classList.remove("hide-dock"); return; }
+    if(window.scrollY > lastY + 8){ nav.classList.add("hide-dock"); clearTimeout(hideTimer); }
+    else if(window.scrollY < lastY - 4){ nav.classList.remove("hide-dock"); clearTimeout(hideTimer); hideTimer=setTimeout(()=>nav.classList.remove("hide-dock"),1800); }
+    lastY = window.scrollY;
+  };
+  window.addEventListener("scroll",dock,{passive:true});
   function go(k){
     if(k!=="hist" && bloq()){ toast("Abre los seis motivos para desbloquear esto"); return; }
     actual = k; document.body.classList.remove("tab-hist","tab-nos","tab-sor","tab-jue","tab-pre"); document.body.classList.add("tab-"+k);
@@ -1597,11 +1707,13 @@ const BDAY_MSG = "Ya hemos llegado a tu primer cumpleaños juntos y no podía es
       $(".dhead",it).onclick = ()=>{ ABIERTO[t] = !ABIERTO[t]; cuerpo.hidden = !ABIERTO[t]; it.classList.toggle("hoy",ABIERTO[t]); };
       const lista = el("div","plist"); cuerpo.appendChild(lista); box.appendChild(it);
       PREMIOS.filter(p=>p.t===t).forEach(p=>{
-        const tengo = P.gastados.includes(p.id), card = el("div","pcard"+(t==="premium"?" pm":"")+(tengo?" got":""));
-        const h4 = el("h4",null,p.oculto?"Un premio muy muy especial que todavía no puedo contarte":p.n); if(p.oculto){ h4.style.cssText = "filter:blur(6px);-webkit-user-select:none;user-select:none;pointer-events:none"; h4.setAttribute("aria-hidden","true"); } card.appendChild(h4);
-        if(p.oculto) card.appendChild(el("p",null,"🔒 Se desbloqueará más adelante."));
+        const tengo = P.gastados.includes(p.id), secretOpen = !!p.secreto && P.pts >= (p.minPts||9999), oculto = !!p.oculto && !secretOpen;
+        const card = el("div","pcard"+(t==="premium"?" pm":"")+(tengo?" got":"")+(p.secreto?" secret":"")+(p.secreto&&!secretOpen?" locked-secret":""));
+        if(p.secreto) card.appendChild(el("span","secret-badge",secretOpen?"Secreto descubierto":"Premio secreto"));
+        const h4 = el("h4",null,oculto?"Un premio muy especial":p.n); card.appendChild(h4);
+        if(oculto) card.appendChild(el("p","secret-desc","🔒 Sigue jugando. Este premio se descubre al conseguir "+p.minPts+" puntos en total."));
         const pie = el("div","pfoot"), cs = el("span","pcost"); cs.innerHTML = "<b>"+p.c+"</b> puntos"; pie.appendChild(cs);
-        const b = el("button","btn",tengo?"Pedido":p.oculto?"Bloqueado":"Canjear"); b.type = "button"; b.disabled = tengo || p.oculto || disp<p.c;
+        const b = el("button","btn",tengo?"Pedido":oculto?"Bloqueado":p.oculto?"Canjear":"Canjear"); b.type = "button"; b.disabled = tengo || oculto || disp<p.c;
         b.onclick = ()=>{
           if(libres()<p.c) return;
           ask("¿Canjear \""+p.n+"\" por "+p.c+" puntos?", ()=>{
@@ -1642,7 +1754,7 @@ $("#again").onclick = ()=>{
         S = 'M20 3l4.5 11.5 12 .6-9.4 7.5 3.2 11.9L20 27.5l-10.3 7 3.2-11.9L3.5 15.1l12-.6z',
         A = 'M4 4C8 22 22 32 46 32M36 24l12 8-12 6';
   // frase a mano de cada apartado (edítalas a tu gusto)
-  const N = {"La distancia":"te echo de menos","El cielo":"nuestro cielo","Razones para quererte":"hay más, jiji","¿Cuánto me quieres?":"piénsalo bien","Para Lorena":"léela despacio","Lo que me enamoró":"mis favoritas","Tus regalos":"¡ábrelos!","Tu regalo":"elige uno","Tu tarjeta":"muy pronto","Juegos diarios":"¡a jugar!","Premios":"ya casi"};
+  const N = {"La distancia":"te echo de menos","El cielo":"nuestro cielo","Razones para quererte":"hay más, jiji","¿Cuánto me quieres?":"piénsalo bien","Para Lorena":"léela despacio","Lo que me enamoró":"mis favoritas","Tus regalos":"¡ábrelos!","Tu regalo":"elige uno","Tu tarjeta":"muy pronto","Juegos":"¡a jugar!","Premios":"ya casi"};
   const F = ["jiji 🤍","para ti","mi vida"];
   const hosts = [...document.querySelectorAll(".fblock")].map(e=>[e,0])
     .concat([...document.querySelectorAll(".enamoro .enin, .dias .din")].map(e=>[e,1]));
